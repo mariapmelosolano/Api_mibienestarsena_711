@@ -17,6 +17,9 @@ app.use(morgan('dev'));  // Solo una vez
 // Routes (adaptado para categories)
 app.use('/api/v1/categories', require('./api/v1/routes/categories.routes'));  // Cambiado de users a categories
 app.use('/api/v1/events', require('./api/v1/routes/events.routes')); 
+app.use('/api/v1/rols', require('./api/v1/routes/rols.routes'));
+app.use('/api/v1/users', require('./api/v1/routes/users.routes'));
+
 // Starting the Server
 app.listen(app.get('port'), () => {
     console.log(`Server running on http://localhost:${app.get('port')}`);

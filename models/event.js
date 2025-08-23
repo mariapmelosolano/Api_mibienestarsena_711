@@ -3,10 +3,14 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
     static associate(models) {
-      // ASOCIACIÓN CORREGIDA
       Event.belongsTo(models.Categorie, {
         foreignKey: 'categoryId',
         as: 'categorie'
+      });
+      
+      Event.belongsTo(models.User, {
+        foreignKey: 'userId',
+        as: 'user'
       });
     }
   }
@@ -16,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     startDate: DataTypes.DATE,
     endDate: DataTypes.DATE,
     categoryId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     state: DataTypes.STRING,
     maxCapacity: DataTypes.INTEGER
   }, {
