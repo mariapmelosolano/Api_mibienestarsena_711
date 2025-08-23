@@ -9,6 +9,14 @@ const getAllUsers = async (req, res) => {
     }
 };
 
+const testUserAPI = (req, resp) =>{
+    console.log('TestUserAPI');
+    resp.status(200).send({
+        "status":"OK",
+        "message": "API User state: available"
+    });
+};
+
 const getUser = async (req, res) => {
     let id = req.params.userId;
     try {
@@ -51,6 +59,7 @@ const deleteUser = async (req, res) => {
 };
 
 module.exports = {
+    testUserAPI,
     getAllUsers,
     getUser,
     createUser,
