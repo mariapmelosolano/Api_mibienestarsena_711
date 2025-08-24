@@ -1,6 +1,7 @@
 // Including Dependencies
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 if (process.env.NODE_ENV !== 'production') {
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));  // Solo una vez
 
 // Routes (adaptado para categories)
+app.use(cors());
 app.use('/api/v1/categories', require('./api/v1/routes/categories.routes'));  // Cambiado de users a categories
 app.use('/api/v1/events', require('./api/v1/routes/events.routes')); 
 app.use('/api/v1/rols', require('./api/v1/routes/rols.routes'));

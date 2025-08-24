@@ -23,7 +23,7 @@
     "username": "mariapmelo",
     "password": "TkwjU254Ccl9sQqf2nK9GO4mZBs1sUKd",
     "database": "mibienestar711_xdss",
-    "host": "dpg-d2l4tun5r7bs73db4ua0-a",
+    "host": "dpg-d2l4tun5r7bs73db4ua0-a.oregon-postgres.render.com",
     "dialect": "postgres",
     "dialectOptions":{
       "ssl":{
