@@ -2,12 +2,10 @@
   "name": "api_mibienestarsena_711",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js",
-  "build": "npm install && npx sequelize-cli db:migrate --env production",
-  "migrate": "npx sequelize-cli db:migrate --env production"
-},
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
