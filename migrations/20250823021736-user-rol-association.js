@@ -10,7 +10,7 @@ module.exports = {
         table: 'Rols',
         field: 'id'
       },
-      onDelete: 'SET NULL',  // o 'RESTRICT' como prefieras
+      onDelete: 'SET NULL',  
       onUpdate: 'CASCADE'
     });
   },
